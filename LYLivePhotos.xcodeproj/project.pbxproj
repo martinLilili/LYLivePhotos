@@ -1,0 +1,720 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EDA43B321FBEB25600F3A9B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA43B311FBEB25600F3A9B2 /* AppDelegate.swift */; };
+		EDA43B341FBEB25600F3A9B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA43B331FBEB25600F3A9B2 /* ViewController.swift */; };
+		EDA43B371FBEB25600F3A9B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDA43B351FBEB25600F3A9B2 /* Main.storyboard */; };
+		EDA43B391FBEB25600F3A9B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDA43B381FBEB25600F3A9B2 /* Assets.xcassets */; };
+		EDA43B3C1FBEB25600F3A9B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDA43B3A1FBEB25600F3A9B2 /* LaunchScreen.storyboard */; };
+		EDA43B471FBEB25600F3A9B2 /* LYLivePhotosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA43B461FBEB25600F3A9B2 /* LYLivePhotosTests.swift */; };
+		EDA43B521FBEB25600F3A9B2 /* LYLivePhotosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA43B511FBEB25600F3A9B2 /* LYLivePhotosUITests.swift */; };
+		EDA43B661FBEB28600F3A9B2 /* PhotosUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDA43B651FBEB28600F3A9B2 /* PhotosUI.framework */; };
+		EDA43B681FBEB28600F3A9B2 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDA43B671FBEB28600F3A9B2 /* Photos.framework */; };
+		EDA43B6B1FBEB28600F3A9B2 /* PhotoEditingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA43B6A1FBEB28600F3A9B2 /* PhotoEditingViewController.swift */; };
+		EDA43B6E1FBEB28600F3A9B2 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDA43B6C1FBEB28600F3A9B2 /* MainInterface.storyboard */; };
+		EDA43B721FBEB28600F3A9B2 /* LYLivePhotoEdit.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = EDA43B631FBEB28600F3A9B2 /* LYLivePhotoEdit.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EDA43B431FBEB25600F3A9B2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EDA43B261FBEB25600F3A9B2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EDA43B2D1FBEB25600F3A9B2;
+			remoteInfo = LYLivePhotos;
+		};
+		EDA43B4E1FBEB25600F3A9B2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EDA43B261FBEB25600F3A9B2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EDA43B2D1FBEB25600F3A9B2;
+			remoteInfo = LYLivePhotos;
+		};
+		EDA43B701FBEB28600F3A9B2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EDA43B261FBEB25600F3A9B2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EDA43B621FBEB28600F3A9B2;
+			remoteInfo = LYLivePhotoEdit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EDA43B761FBEB28600F3A9B2 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				EDA43B721FBEB28600F3A9B2 /* LYLivePhotoEdit.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		EDA43B2E1FBEB25600F3A9B2 /* LYLivePhotos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LYLivePhotos.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDA43B311FBEB25600F3A9B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EDA43B331FBEB25600F3A9B2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EDA43B361FBEB25600F3A9B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EDA43B381FBEB25600F3A9B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EDA43B3B1FBEB25600F3A9B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EDA43B3D1FBEB25600F3A9B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDA43B421FBEB25600F3A9B2 /* LYLivePhotosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LYLivePhotosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDA43B461FBEB25600F3A9B2 /* LYLivePhotosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LYLivePhotosTests.swift; sourceTree = "<group>"; };
+		EDA43B481FBEB25600F3A9B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDA43B4D1FBEB25600F3A9B2 /* LYLivePhotosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LYLivePhotosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDA43B511FBEB25600F3A9B2 /* LYLivePhotosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LYLivePhotosUITests.swift; sourceTree = "<group>"; };
+		EDA43B531FBEB25600F3A9B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDA43B631FBEB28600F3A9B2 /* LYLivePhotoEdit.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = LYLivePhotoEdit.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDA43B651FBEB28600F3A9B2 /* PhotosUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PhotosUI.framework; path = System/Library/Frameworks/PhotosUI.framework; sourceTree = SDKROOT; };
+		EDA43B671FBEB28600F3A9B2 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
+		EDA43B6A1FBEB28600F3A9B2 /* PhotoEditingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoEditingViewController.swift; sourceTree = "<group>"; };
+		EDA43B6D1FBEB28600F3A9B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		EDA43B6F1FBEB28600F3A9B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EDA43B2B1FBEB25600F3A9B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDA43B3F1FBEB25600F3A9B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDA43B4A1FBEB25600F3A9B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDA43B601FBEB28600F3A9B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDA43B661FBEB28600F3A9B2 /* PhotosUI.framework in Frameworks */,
+				EDA43B681FBEB28600F3A9B2 /* Photos.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EDA43B251FBEB25600F3A9B2 = {
+			isa = PBXGroup;
+			children = (
+				EDA43B301FBEB25600F3A9B2 /* LYLivePhotos */,
+				EDA43B451FBEB25600F3A9B2 /* LYLivePhotosTests */,
+				EDA43B501FBEB25600F3A9B2 /* LYLivePhotosUITests */,
+				EDA43B691FBEB28600F3A9B2 /* LYLivePhotoEdit */,
+				EDA43B641FBEB28600F3A9B2 /* Frameworks */,
+				EDA43B2F1FBEB25600F3A9B2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EDA43B2F1FBEB25600F3A9B2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EDA43B2E1FBEB25600F3A9B2 /* LYLivePhotos.app */,
+				EDA43B421FBEB25600F3A9B2 /* LYLivePhotosTests.xctest */,
+				EDA43B4D1FBEB25600F3A9B2 /* LYLivePhotosUITests.xctest */,
+				EDA43B631FBEB28600F3A9B2 /* LYLivePhotoEdit.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EDA43B301FBEB25600F3A9B2 /* LYLivePhotos */ = {
+			isa = PBXGroup;
+			children = (
+				EDA43B311FBEB25600F3A9B2 /* AppDelegate.swift */,
+				EDA43B331FBEB25600F3A9B2 /* ViewController.swift */,
+				EDA43B351FBEB25600F3A9B2 /* Main.storyboard */,
+				EDA43B381FBEB25600F3A9B2 /* Assets.xcassets */,
+				EDA43B3A1FBEB25600F3A9B2 /* LaunchScreen.storyboard */,
+				EDA43B3D1FBEB25600F3A9B2 /* Info.plist */,
+			);
+			path = LYLivePhotos;
+			sourceTree = "<group>";
+		};
+		EDA43B451FBEB25600F3A9B2 /* LYLivePhotosTests */ = {
+			isa = PBXGroup;
+			children = (
+				EDA43B461FBEB25600F3A9B2 /* LYLivePhotosTests.swift */,
+				EDA43B481FBEB25600F3A9B2 /* Info.plist */,
+			);
+			path = LYLivePhotosTests;
+			sourceTree = "<group>";
+		};
+		EDA43B501FBEB25600F3A9B2 /* LYLivePhotosUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EDA43B511FBEB25600F3A9B2 /* LYLivePhotosUITests.swift */,
+				EDA43B531FBEB25600F3A9B2 /* Info.plist */,
+			);
+			path = LYLivePhotosUITests;
+			sourceTree = "<group>";
+		};
+		EDA43B641FBEB28600F3A9B2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EDA43B651FBEB28600F3A9B2 /* PhotosUI.framework */,
+				EDA43B671FBEB28600F3A9B2 /* Photos.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EDA43B691FBEB28600F3A9B2 /* LYLivePhotoEdit */ = {
+			isa = PBXGroup;
+			children = (
+				EDA43B6A1FBEB28600F3A9B2 /* PhotoEditingViewController.swift */,
+				EDA43B6C1FBEB28600F3A9B2 /* MainInterface.storyboard */,
+				EDA43B6F1FBEB28600F3A9B2 /* Info.plist */,
+			);
+			path = LYLivePhotoEdit;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EDA43B2D1FBEB25600F3A9B2 /* LYLivePhotos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDA43B561FBEB25600F3A9B2 /* Build configuration list for PBXNativeTarget "LYLivePhotos" */;
+			buildPhases = (
+				EDA43B2A1FBEB25600F3A9B2 /* Sources */,
+				EDA43B2B1FBEB25600F3A9B2 /* Frameworks */,
+				EDA43B2C1FBEB25600F3A9B2 /* Resources */,
+				EDA43B761FBEB28600F3A9B2 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EDA43B711FBEB28600F3A9B2 /* PBXTargetDependency */,
+			);
+			name = LYLivePhotos;
+			productName = LYLivePhotos;
+			productReference = EDA43B2E1FBEB25600F3A9B2 /* LYLivePhotos.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EDA43B411FBEB25600F3A9B2 /* LYLivePhotosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDA43B591FBEB25600F3A9B2 /* Build configuration list for PBXNativeTarget "LYLivePhotosTests" */;
+			buildPhases = (
+				EDA43B3E1FBEB25600F3A9B2 /* Sources */,
+				EDA43B3F1FBEB25600F3A9B2 /* Frameworks */,
+				EDA43B401FBEB25600F3A9B2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EDA43B441FBEB25600F3A9B2 /* PBXTargetDependency */,
+			);
+			name = LYLivePhotosTests;
+			productName = LYLivePhotosTests;
+			productReference = EDA43B421FBEB25600F3A9B2 /* LYLivePhotosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EDA43B4C1FBEB25600F3A9B2 /* LYLivePhotosUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDA43B5C1FBEB25600F3A9B2 /* Build configuration list for PBXNativeTarget "LYLivePhotosUITests" */;
+			buildPhases = (
+				EDA43B491FBEB25600F3A9B2 /* Sources */,
+				EDA43B4A1FBEB25600F3A9B2 /* Frameworks */,
+				EDA43B4B1FBEB25600F3A9B2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EDA43B4F1FBEB25600F3A9B2 /* PBXTargetDependency */,
+			);
+			name = LYLivePhotosUITests;
+			productName = LYLivePhotosUITests;
+			productReference = EDA43B4D1FBEB25600F3A9B2 /* LYLivePhotosUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		EDA43B621FBEB28600F3A9B2 /* LYLivePhotoEdit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDA43B731FBEB28600F3A9B2 /* Build configuration list for PBXNativeTarget "LYLivePhotoEdit" */;
+			buildPhases = (
+				EDA43B5F1FBEB28600F3A9B2 /* Sources */,
+				EDA43B601FBEB28600F3A9B2 /* Frameworks */,
+				EDA43B611FBEB28600F3A9B2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LYLivePhotoEdit;
+			productName = LYLivePhotoEdit;
+			productReference = EDA43B631FBEB28600F3A9B2 /* LYLivePhotoEdit.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EDA43B261FBEB25600F3A9B2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0910;
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = martin;
+				TargetAttributes = {
+					EDA43B2D1FBEB25600F3A9B2 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+					EDA43B411FBEB25600F3A9B2 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EDA43B2D1FBEB25600F3A9B2;
+					};
+					EDA43B4C1FBEB25600F3A9B2 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EDA43B2D1FBEB25600F3A9B2;
+					};
+					EDA43B621FBEB28600F3A9B2 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = EDA43B291FBEB25600F3A9B2 /* Build configuration list for PBXProject "LYLivePhotos" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EDA43B251FBEB25600F3A9B2;
+			productRefGroup = EDA43B2F1FBEB25600F3A9B2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EDA43B2D1FBEB25600F3A9B2 /* LYLivePhotos */,
+				EDA43B411FBEB25600F3A9B2 /* LYLivePhotosTests */,
+				EDA43B4C1FBEB25600F3A9B2 /* LYLivePhotosUITests */,
+				EDA43B621FBEB28600F3A9B2 /* LYLivePhotoEdit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EDA43B2C1FBEB25600F3A9B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDA43B3C1FBEB25600F3A9B2 /* LaunchScreen.storyboard in Resources */,
+				EDA43B391FBEB25600F3A9B2 /* Assets.xcassets in Resources */,
+				EDA43B371FBEB25600F3A9B2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDA43B401FBEB25600F3A9B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDA43B4B1FBEB25600F3A9B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDA43B611FBEB28600F3A9B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDA43B6E1FBEB28600F3A9B2 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EDA43B2A1FBEB25600F3A9B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDA43B341FBEB25600F3A9B2 /* ViewController.swift in Sources */,
+				EDA43B321FBEB25600F3A9B2 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDA43B3E1FBEB25600F3A9B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDA43B471FBEB25600F3A9B2 /* LYLivePhotosTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDA43B491FBEB25600F3A9B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDA43B521FBEB25600F3A9B2 /* LYLivePhotosUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDA43B5F1FBEB28600F3A9B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDA43B6B1FBEB28600F3A9B2 /* PhotoEditingViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EDA43B441FBEB25600F3A9B2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EDA43B2D1FBEB25600F3A9B2 /* LYLivePhotos */;
+			targetProxy = EDA43B431FBEB25600F3A9B2 /* PBXContainerItemProxy */;
+		};
+		EDA43B4F1FBEB25600F3A9B2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EDA43B2D1FBEB25600F3A9B2 /* LYLivePhotos */;
+			targetProxy = EDA43B4E1FBEB25600F3A9B2 /* PBXContainerItemProxy */;
+		};
+		EDA43B711FBEB28600F3A9B2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EDA43B621FBEB28600F3A9B2 /* LYLivePhotoEdit */;
+			targetProxy = EDA43B701FBEB28600F3A9B2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EDA43B351FBEB25600F3A9B2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EDA43B361FBEB25600F3A9B2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EDA43B3A1FBEB25600F3A9B2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EDA43B3B1FBEB25600F3A9B2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		EDA43B6C1FBEB28600F3A9B2 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EDA43B6D1FBEB28600F3A9B2 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EDA43B541FBEB25600F3A9B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EDA43B551FBEB25600F3A9B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EDA43B571FBEB25600F3A9B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 37DXBWQK86;
+				INFOPLIST_FILE = LYLivePhotos/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.liyue.LYLivePhotos;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EDA43B581FBEB25600F3A9B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 37DXBWQK86;
+				INFOPLIST_FILE = LYLivePhotos/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.liyue.LYLivePhotos;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EDA43B5A1FBEB25600F3A9B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 37DXBWQK86;
+				INFOPLIST_FILE = LYLivePhotosTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.liyue.LYLivePhotos.LYLivePhotosTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LYLivePhotos.app/LYLivePhotos";
+			};
+			name = Debug;
+		};
+		EDA43B5B1FBEB25600F3A9B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 37DXBWQK86;
+				INFOPLIST_FILE = LYLivePhotosTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.liyue.LYLivePhotos.LYLivePhotosTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LYLivePhotos.app/LYLivePhotos";
+			};
+			name = Release;
+		};
+		EDA43B5D1FBEB25600F3A9B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 37DXBWQK86;
+				INFOPLIST_FILE = LYLivePhotosUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.liyue.LYLivePhotos.LYLivePhotosUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LYLivePhotos;
+			};
+			name = Debug;
+		};
+		EDA43B5E1FBEB25600F3A9B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 37DXBWQK86;
+				INFOPLIST_FILE = LYLivePhotosUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.liyue.LYLivePhotos.LYLivePhotosUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LYLivePhotos;
+			};
+			name = Release;
+		};
+		EDA43B741FBEB28600F3A9B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 37DXBWQK86;
+				INFOPLIST_FILE = LYLivePhotoEdit/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.liyue.LYLivePhotos.LYLivePhotoEdit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EDA43B751FBEB28600F3A9B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 37DXBWQK86;
+				INFOPLIST_FILE = LYLivePhotoEdit/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.liyue.LYLivePhotos.LYLivePhotoEdit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EDA43B291FBEB25600F3A9B2 /* Build configuration list for PBXProject "LYLivePhotos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDA43B541FBEB25600F3A9B2 /* Debug */,
+				EDA43B551FBEB25600F3A9B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EDA43B561FBEB25600F3A9B2 /* Build configuration list for PBXNativeTarget "LYLivePhotos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDA43B571FBEB25600F3A9B2 /* Debug */,
+				EDA43B581FBEB25600F3A9B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EDA43B591FBEB25600F3A9B2 /* Build configuration list for PBXNativeTarget "LYLivePhotosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDA43B5A1FBEB25600F3A9B2 /* Debug */,
+				EDA43B5B1FBEB25600F3A9B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EDA43B5C1FBEB25600F3A9B2 /* Build configuration list for PBXNativeTarget "LYLivePhotosUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDA43B5D1FBEB25600F3A9B2 /* Debug */,
+				EDA43B5E1FBEB25600F3A9B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EDA43B731FBEB28600F3A9B2 /* Build configuration list for PBXNativeTarget "LYLivePhotoEdit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDA43B741FBEB28600F3A9B2 /* Debug */,
+				EDA43B751FBEB28600F3A9B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EDA43B261FBEB25600F3A9B2 /* Project object */;
+}

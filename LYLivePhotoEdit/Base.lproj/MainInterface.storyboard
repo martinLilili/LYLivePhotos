@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ObA-dk-sSI">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Photo Editing View Controller-->
+        <scene sceneID="7MM-of-jgj">
+            <objects>
+                <viewController id="ObA-dk-sSI" customClass="PhotoEditingViewController" customModule="LYLivePhotoEdit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zMn-AG-sqS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="528"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eyg-HS-s6q" customClass="PHLivePhotoView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="528"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1NI-1z-qnO">
+                                <rect key="frame" x="0.0" y="465" width="320" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="vXy-Xk-p1t"/>
+                                </constraints>
+                                <state key="normal" title="转为视频"/>
+                                <connections>
+                                    <action selector="coverToVideoClicked:" destination="ObA-dk-sSI" eventType="touchUpInside" id="xzb-SF-bHO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="eyg-HS-s6q" firstAttribute="top" secondItem="zMn-AG-sqS" secondAttribute="top" id="36r-37-nOh"/>
+                            <constraint firstItem="fkF-hH-LvW" firstAttribute="bottom" secondItem="1NI-1z-qnO" secondAttribute="bottom" constant="3" id="7Yf-Ze-Aib"/>
+                            <constraint firstItem="eyg-HS-s6q" firstAttribute="leading" secondItem="zMn-AG-sqS" secondAttribute="leading" id="Qxw-DL-4Pt"/>
+                            <constraint firstItem="1NI-1z-qnO" firstAttribute="trailing" secondItem="eyg-HS-s6q" secondAttribute="trailing" id="X4F-Ts-c9f"/>
+                            <constraint firstAttribute="trailing" secondItem="eyg-HS-s6q" secondAttribute="trailing" id="ZZD-E2-ed3"/>
+                            <constraint firstItem="eyg-HS-s6q" firstAttribute="bottom" secondItem="fkF-hH-LvW" secondAttribute="bottom" id="mWh-Eb-h5R"/>
+                            <constraint firstItem="1NI-1z-qnO" firstAttribute="leading" secondItem="eyg-HS-s6q" secondAttribute="leading" id="wK1-du-0hr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fkF-hH-LvW"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="528"/>
+                    <connections>
+                        <outlet property="livePhotoView" destination="eyg-HS-s6q" id="rsP-sT-hr9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X47-rx-isc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116.8" y="118.74062968515743"/>
+        </scene>
+    </scenes>
+</document>
