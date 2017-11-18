@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED6058A81FC0182F00B38034 /* PhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6058A71FC0182F00B38034 /* PhotosCollectionViewController.swift */; };
+		ED6058AA1FC018B300B38034 /* PhotosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6058A91FC018B300B38034 /* PhotosCollectionViewCell.swift */; };
 		EDA43B321FBEB25600F3A9B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA43B311FBEB25600F3A9B2 /* AppDelegate.swift */; };
-		EDA43B341FBEB25600F3A9B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA43B331FBEB25600F3A9B2 /* ViewController.swift */; };
 		EDA43B371FBEB25600F3A9B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDA43B351FBEB25600F3A9B2 /* Main.storyboard */; };
 		EDA43B391FBEB25600F3A9B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDA43B381FBEB25600F3A9B2 /* Assets.xcassets */; };
 		EDA43B3C1FBEB25600F3A9B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDA43B3A1FBEB25600F3A9B2 /* LaunchScreen.storyboard */; };
@@ -60,9 +61,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		ED6058A71FC0182F00B38034 /* PhotosCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewController.swift; sourceTree = "<group>"; };
+		ED6058A91FC018B300B38034 /* PhotosCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewCell.swift; sourceTree = "<group>"; };
 		EDA43B2E1FBEB25600F3A9B2 /* LYLivePhotos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LYLivePhotos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDA43B311FBEB25600F3A9B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EDA43B331FBEB25600F3A9B2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EDA43B361FBEB25600F3A9B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EDA43B381FBEB25600F3A9B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EDA43B3B1FBEB25600F3A9B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -142,11 +144,12 @@
 			isa = PBXGroup;
 			children = (
 				EDA43B311FBEB25600F3A9B2 /* AppDelegate.swift */,
-				EDA43B331FBEB25600F3A9B2 /* ViewController.swift */,
 				EDA43B351FBEB25600F3A9B2 /* Main.storyboard */,
 				EDA43B381FBEB25600F3A9B2 /* Assets.xcassets */,
 				EDA43B3A1FBEB25600F3A9B2 /* LaunchScreen.storyboard */,
 				EDA43B3D1FBEB25600F3A9B2 /* Info.plist */,
+				ED6058A71FC0182F00B38034 /* PhotosCollectionViewController.swift */,
+				ED6058A91FC018B300B38034 /* PhotosCollectionViewCell.swift */,
 			);
 			path = LYLivePhotos;
 			sourceTree = "<group>";
@@ -354,8 +357,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDA43B341FBEB25600F3A9B2 /* ViewController.swift in Sources */,
 				EDA43B321FBEB25600F3A9B2 /* AppDelegate.swift in Sources */,
+				ED6058A81FC0182F00B38034 /* PhotosCollectionViewController.swift in Sources */,
+				ED6058AA1FC018B300B38034 /* PhotosCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
