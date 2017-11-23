@@ -117,6 +117,13 @@ class PhotosCollectionViewController: UICollectionViewController {
     
         return cell
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let indexPath = collectionView?.indexPathsForSelectedItems?.first {
+            let photoVC = segue.destination as! LYPhotoEditViewController
+            photoVC.livePhotoAsset = livePhotoAssets?[indexPath.item]
+        }
+    }
 
     // MARK: UICollectionViewDelegate
 

@@ -44,10 +44,28 @@ class PhotoEditingViewController: UIViewController {
                 }
             }
             if videoResource != nil {
-                let filePath = NSTemporaryDirectory() + "tempVideo1.mov"
+                let filePath = NSTemporaryDirectory() + "tempVideo.mov"
                 let fileUrl = URL(fileURLWithPath: filePath)
                 removeFileIfExists(fileURL: fileUrl)
                 PHAssetResourceManager.default().writeData(for: videoResource!, toFile: fileUrl, options: nil, completionHandler: { (error) in
+                    
+                    let reversefilePath = NSTemporaryDirectory() + "tempReverseVideo.mov"
+                    let reverseFileUrl = URL(fileURLWithPath: reversefilePath)
+                    self.removeFileIfExists(fileURL: reverseFileUrl)
+                    
+                    AVUtilities.reverse(AVAsset(url: fileUrl), outputURL: reverseFileUrl, completion: { (asset) in
+                    
+                        PHPhotoLibrary.shared().performChanges({
+                            PHAssetChangeRequest.creationRequestForAssetFromVideo(atFileURL: reverseFileUrl)
+                        }, completionHandler: { (isSuccess, error) in
+                            if isSuccess {
+                                print("videoSaved")
+                            } else{
+                                print("保存失败：\(error!.localizedDescription)")
+                            }
+                        })
+                    })
+                    
                     
                     PHPhotoLibrary.shared().performChanges({
                         PHAssetChangeRequest.creationRequestForAssetFromVideo(atFileURL: fileUrl)
@@ -59,6 +77,8 @@ class PhotoEditingViewController: UIViewController {
                         }
                     })
                 })
+                
+                
             }
         }else{
             

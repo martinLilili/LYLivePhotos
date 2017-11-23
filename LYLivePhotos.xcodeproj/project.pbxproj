@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		ED6058A81FC0182F00B38034 /* PhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6058A71FC0182F00B38034 /* PhotosCollectionViewController.swift */; };
 		ED6058AA1FC018B300B38034 /* PhotosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6058A91FC018B300B38034 /* PhotosCollectionViewCell.swift */; };
+		ED627FD61FC3D2CC00CEDB89 /* LYPhotoEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED627FD51FC3D2CC00CEDB89 /* LYPhotoEditViewController.swift */; };
+		ED627FD81FC3D7C300CEDB89 /* AVUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED627FD71FC3D7C300CEDB89 /* AVUtilities.swift */; };
+		ED627FD91FC3D7C300CEDB89 /* AVUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED627FD71FC3D7C300CEDB89 /* AVUtilities.swift */; };
 		EDA43B321FBEB25600F3A9B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA43B311FBEB25600F3A9B2 /* AppDelegate.swift */; };
 		EDA43B371FBEB25600F3A9B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDA43B351FBEB25600F3A9B2 /* Main.storyboard */; };
 		EDA43B391FBEB25600F3A9B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDA43B381FBEB25600F3A9B2 /* Assets.xcassets */; };
@@ -63,6 +66,8 @@
 /* Begin PBXFileReference section */
 		ED6058A71FC0182F00B38034 /* PhotosCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewController.swift; sourceTree = "<group>"; };
 		ED6058A91FC018B300B38034 /* PhotosCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewCell.swift; sourceTree = "<group>"; };
+		ED627FD51FC3D2CC00CEDB89 /* LYPhotoEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LYPhotoEditViewController.swift; sourceTree = "<group>"; };
+		ED627FD71FC3D7C300CEDB89 /* AVUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVUtilities.swift; sourceTree = "<group>"; };
 		EDA43B2E1FBEB25600F3A9B2 /* LYLivePhotos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LYLivePhotos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDA43B311FBEB25600F3A9B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDA43B361FBEB25600F3A9B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -143,6 +148,7 @@
 		EDA43B301FBEB25600F3A9B2 /* LYLivePhotos */ = {
 			isa = PBXGroup;
 			children = (
+				ED627FD71FC3D7C300CEDB89 /* AVUtilities.swift */,
 				EDA43B311FBEB25600F3A9B2 /* AppDelegate.swift */,
 				EDA43B351FBEB25600F3A9B2 /* Main.storyboard */,
 				EDA43B381FBEB25600F3A9B2 /* Assets.xcassets */,
@@ -150,6 +156,7 @@
 				EDA43B3D1FBEB25600F3A9B2 /* Info.plist */,
 				ED6058A71FC0182F00B38034 /* PhotosCollectionViewController.swift */,
 				ED6058A91FC018B300B38034 /* PhotosCollectionViewCell.swift */,
+				ED627FD51FC3D2CC00CEDB89 /* LYPhotoEditViewController.swift */,
 			);
 			path = LYLivePhotos;
 			sourceTree = "<group>";
@@ -359,7 +366,9 @@
 			files = (
 				EDA43B321FBEB25600F3A9B2 /* AppDelegate.swift in Sources */,
 				ED6058A81FC0182F00B38034 /* PhotosCollectionViewController.swift in Sources */,
+				ED627FD61FC3D2CC00CEDB89 /* LYPhotoEditViewController.swift in Sources */,
 				ED6058AA1FC018B300B38034 /* PhotosCollectionViewCell.swift in Sources */,
+				ED627FD81FC3D7C300CEDB89 /* AVUtilities.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,6 +393,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDA43B6B1FBEB28600F3A9B2 /* PhotoEditingViewController.swift in Sources */,
+				ED627FD91FC3D7C300CEDB89 /* AVUtilities.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

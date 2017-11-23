@@ -1,18 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gUh-8C-Vc9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Vz0-h3-qQ9">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Photos Collection View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="1CH-9c-USN">
+            <objects>
+                <navigationController id="Vz0-h3-qQ9" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Kzt-fd-U5X">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="gUh-8C-Vc9" kind="relationship" relationship="rootViewController" id="YO6-gC-v4b"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mag-KK-hyp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-922" y="429"/>
+        </scene>
+        <!--LivePhotos-->
         <scene sceneID="k6H-ha-1nD">
             <objects>
-                <collectionViewController id="gUh-8C-Vc9" customClass="PhotosCollectionViewController" customModule="LYLivePhotos" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController title="LivePhotos" id="gUh-8C-Vc9" customClass="PhotosCollectionViewController" customModule="LYLivePhotos" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="nI6-2a-YpI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -44,6 +61,7 @@
                                 </constraints>
                                 <connections>
                                     <outlet property="imageView" destination="AGr-J5-aTu" id="Lhu-6Y-By9"/>
+                                    <segue destination="whw-sN-NES" kind="show" id="ep9-nJ-A7u"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -52,10 +70,51 @@
                             <outlet property="delegate" destination="gUh-8C-Vc9" id="hoH-Xp-iRa"/>
                         </connections>
                     </collectionView>
+                    <navigationItem key="navigationItem" title="LivePhotos" id="TjB-Qh-tdG"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kbr-Z8-TKx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-68" y="428.63568215892059"/>
+            <point key="canvasLocation" x="-7" y="429"/>
+        </scene>
+        <!--Photo Edit View Controller-->
+        <scene sceneID="Ssx-9S-ev8">
+            <objects>
+                <viewController id="whw-sN-NES" customClass="LYPhotoEditViewController" customModule="LYLivePhotos" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4Vq-lJ-onf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bAL-cV-XsO">
+                                <rect key="frame" x="29" y="608" width="96" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="96" id="deS-rc-fjz"/>
+                                </constraints>
+                                <state key="normal" title="循环播放"/>
+                                <connections>
+                                    <action selector="loopBtnClicked:" destination="whw-sN-NES" eventType="touchUpInside" id="eJo-p2-nHT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sVl-yw-HCH">
+                                <rect key="frame" x="284" y="608" width="62" height="30"/>
+                                <state key="normal" title="来回播放"/>
+                                <connections>
+                                    <action selector="playBackBtnClicked:" destination="whw-sN-NES" eventType="touchUpInside" id="MSd-Qd-psK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Vbr-FE-NX2" firstAttribute="trailing" secondItem="sVl-yw-HCH" secondAttribute="trailing" constant="29" id="ApU-pv-oRa"/>
+                            <constraint firstItem="sVl-yw-HCH" firstAttribute="baseline" secondItem="bAL-cV-XsO" secondAttribute="baseline" id="EYc-qQ-ESE"/>
+                            <constraint firstItem="bAL-cV-XsO" firstAttribute="leading" secondItem="Vbr-FE-NX2" secondAttribute="leading" constant="29" id="eeY-LX-q6D"/>
+                            <constraint firstItem="Vbr-FE-NX2" firstAttribute="bottom" secondItem="bAL-cV-XsO" secondAttribute="bottom" constant="29" id="qa0-hV-7hq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Vbr-FE-NX2"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fNz-zj-6P1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="792.79999999999995" y="428.63568215892059"/>
         </scene>
     </scenes>
 </document>
