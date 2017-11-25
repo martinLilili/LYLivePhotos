@@ -16,10 +16,21 @@ class LYPhotoEditViewController: UIViewController {
     var livePhotoAsset: PHAsset?
     var photoView: PHLivePhotoView!
     
+    let layer = AVPlayerLayer()
+    
     var movieURL = URL(fileURLWithPath: (NSTemporaryDirectory()).appending("tempVideo.mov"))
+    
+    var outputURL : URL? = nil
+    
+    let loopURL = URL(fileURLWithPath: (NSTemporaryDirectory()).appending("tempLoopVideo.mov"))
+    let playBackURL = URL(fileURLWithPath: (NSTemporaryDirectory()).appending("tempPlayBackVideo.mov"))
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        removeFileIfExists(fileURL: loopURL)
+        removeFileIfExists(fileURL: playBackURL)
+        let rightBtn = UIBarButtonItem(title: "保存视频", style: .done, target: self, action: #selector(LYPhotoEditViewController.rightBtnClicked))
+        self.navigationItem.rightBarButtonItem = rightBtn
 
         photoView = PHLivePhotoView(frame: CGRect.init(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.width))
         photoView.contentMode = .scaleAspectFit
@@ -38,16 +49,30 @@ class LYPhotoEditViewController: UIViewController {
                         
                         let item = AVPlayerItem(url: self.movieURL)
                         let player = AVPlayer(playerItem: item)
-                        let layer = AVPlayerLayer(player: player)
-                        layer.frame = self.view.frame
-                        self.view.layer.addSublayer(layer)
+                        self.layer.player = player
+                        self.layer.frame = self.view.frame
+                        self.view.layer.addSublayer(self.layer)
                         player.play()
-                        
+                        self.outputURL = self.movieURL
                     }
                 }
                 
                 break
             }
+        }
+    }
+    
+    @objc func rightBtnClicked() {
+        if let url = self.outputURL {
+            PHPhotoLibrary.shared().performChanges({
+                PHAssetChangeRequest.creationRequestForAssetFromVideo(atFileURL: url)
+            }, completionHandler: { (isSuccess, error) in
+                if isSuccess {
+                    SVProgressHUD.showSuccess(withStatus: "保存成功，请到相册中查看")
+                } else{
+                    SVProgressHUD.showError(withStatus: "保存失败：\(error!.localizedDescription)")
+                }
+            })
         }
     }
     
@@ -60,6 +85,15 @@ class LYPhotoEditViewController: UIViewController {
             catch {
                 print("Could not delete exist file so cannot write to it")
             }
+        }
+    }
+    
+    func fileExist(fileURL : URL) -> Bool {
+        let fileManager = FileManager.default
+        if fileManager.fileExists(atPath: fileURL.path) {
+            return true
+        } else {
+            return false
         }
     }
     
@@ -98,57 +132,46 @@ class LYPhotoEditViewController: UIViewController {
     }
     
     @IBAction func loopBtnClicked(_ sender: UIButton) {
-        
-        let loopURL = URL(fileURLWithPath: (NSTemporaryDirectory()).appending("tempLoopVideo.mov"))
-        removeFileIfExists(fileURL: loopURL)
-        
-        AVUtilities.loop(AVURLAsset(url: self.movieURL), outputURL: loopURL) { (asset) in
-            DispatchQueue.main.async {
-                let item = AVPlayerItem(url: loopURL)
-                let player = AVPlayer(playerItem: item)
-                let layer = AVPlayerLayer(player: player)
-                layer.frame = self.view.frame
-                self.view.layer.addSublayer(layer)
-                player.play()
+        if fileExist(fileURL: loopURL) {
+            let item = AVPlayerItem(url: self.loopURL)
+            let player = AVPlayer(playerItem: item)
+            self.layer.player = player
+            player.play()
+            self.outputURL = self.loopURL
+        } else {
+            SVProgressHUD.show(withStatus: "处理中")
+            AVUtilities.loop(AVURLAsset(url: self.movieURL), outputURL: loopURL) { (asset) in
+                DispatchQueue.main.async {
+                    let item = AVPlayerItem(url: self.loopURL)
+                    let player = AVPlayer(playerItem: item)
+                    self.layer.player = player
+                    player.play()
+                    self.outputURL = self.loopURL
+                    SVProgressHUD.dismiss()
+                }
             }
         }
-        
     }
     
     @IBAction func playBackBtnClicked(_ sender: UIButton) {
-        let playbackURL = URL(fileURLWithPath: (NSTemporaryDirectory()).appending("playbackVideo.mov"))
-        removeFileIfExists(fileURL: playbackURL)
-        
-        AVUtilities.playback(AVURLAsset(url: self.movieURL), outputURL: playbackURL) { (asset) in
-            DispatchQueue.main.async {
-                let item = AVPlayerItem(url: playbackURL)
-                let player = AVPlayer(playerItem: item)
-                let layer = AVPlayerLayer(player: player)
-                layer.frame = self.view.frame
-                self.view.layer.addSublayer(layer)
-                player.play()
-                
-                PHPhotoLibrary.shared().performChanges({
-                    PHAssetChangeRequest.creationRequestForAssetFromVideo(atFileURL: playbackURL)
-                }, completionHandler: { (isSuccess, error) in
-                    if isSuccess {
-                        print("videoSaved")
-                    } else{
-                        print("保存失败：\(error!.localizedDescription)")
-                    }
-                })
+        if fileExist(fileURL: playBackURL) {
+            let item = AVPlayerItem(url: self.playBackURL)
+            let player = AVPlayer(playerItem: item)
+            self.layer.player = player
+            player.play()
+            self.outputURL = self.playBackURL
+        } else {
+            SVProgressHUD.show(withStatus: "处理中")
+            AVUtilities.playback(AVURLAsset(url: self.movieURL), outputURL: playBackURL) { (asset) in
+                DispatchQueue.main.async {
+                    let item = AVPlayerItem(url: self.playBackURL)
+                    let player = AVPlayer(playerItem: item)
+                    self.layer.player = player
+                    player.play()
+                    self.outputURL = self.playBackURL
+                    SVProgressHUD.dismiss()
+                }
             }
         }
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

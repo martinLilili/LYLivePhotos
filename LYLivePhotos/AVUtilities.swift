@@ -1,11 +1,14 @@
 import UIKit
 import AVFoundation
 
+let videoQueue = DispatchQueue(label: "com.martinli.video")
+
 class AVUtilities {
+    
     static func reverse(_ original: AVAsset, outputURL: URL, completion: @escaping (AVAsset) -> Void) {
         
         // Initialize the reader
-        
+
         var reader: AVAssetReader! = nil
         do {
             reader = try AVAssetReader(asset: original)
@@ -59,19 +62,25 @@ class AVUtilities {
         writer.startWriting()
         writer.startSession(atSourceTime: CMSampleBufferGetPresentationTimeStamp(samples.first!))
         
-        for (index, sample) in samples.enumerated() {
-            let presentationTime = CMSampleBufferGetPresentationTimeStamp(sample)
-            let imageBufferRef = CMSampleBufferGetImageBuffer(samples[samples.count - 1 - index])
-            while !writerInput.isReadyForMoreMediaData {
-                Thread.sleep(forTimeInterval: 0.1)
+        videoQueue.async {
+            for (index, sample) in samples.enumerated() {
+                let presentationTime = CMSampleBufferGetPresentationTimeStamp(sample)
+                let imageBufferRef = CMSampleBufferGetImageBuffer(samples[samples.count - 1 - index])
+                while !writerInput.isReadyForMoreMediaData {
+                    Thread.sleep(forTimeInterval: 0.1)
+                }
+                pixelBufferAdaptor.append(imageBufferRef!, withPresentationTime: presentationTime)
+                
             }
-            pixelBufferAdaptor.append(imageBufferRef!, withPresentationTime: presentationTime)
             
+            writer.finishWriting {
+                DispatchQueue.main.async {
+                    completion(AVAsset(url: outputURL))
+                }
+            }
         }
         
-        writer.finishWriting {
-            completion(AVAsset(url: outputURL))
-        }
+        
     }
     
     static func loop(_ original: AVAsset, outputURL: URL, completion: @escaping (AVAsset) -> Void) {
@@ -131,30 +140,32 @@ class AVUtilities {
         writer.startWriting()
         writer.startSession(atSourceTime: CMSampleBufferGetPresentationTimeStamp(samples.first!))
     
-    
-        for sample in samples {
-            let presentationTime = CMSampleBufferGetPresentationTimeStamp(sample)
-            let imageBufferRef = CMSampleBufferGetImageBuffer(sample)
-            while !writerInput.isReadyForMoreMediaData {
-                Thread.sleep(forTimeInterval: 0.1)
+        videoQueue.async {
+            for sample in samples {
+                let presentationTime = CMSampleBufferGetPresentationTimeStamp(sample)
+                let imageBufferRef = CMSampleBufferGetImageBuffer(sample)
+                while !writerInput.isReadyForMoreMediaData {
+                    Thread.sleep(forTimeInterval: 0.1)
+                }
+                pixelBufferAdaptor.append(imageBufferRef!, withPresentationTime: presentationTime)
             }
-            pixelBufferAdaptor.append(imageBufferRef!, withPresentationTime: presentationTime)
-//            print("presentationTime = \(presentationTime)")
-        }
-        var time = CMSampleBufferGetPresentationTimeStamp(samples.last!)
-        for sample in samples {
+            var time = CMSampleBufferGetPresentationTimeStamp(samples.last!)
             time.value += 20
-            let presentationTime = time
-            let imageBufferRef = CMSampleBufferGetImageBuffer(sample)
-            while !writerInput.isReadyForMoreMediaData {
-                Thread.sleep(forTimeInterval: 0.1)
+            for sample in samples {
+                var presentationTime = time
+                presentationTime.value += CMSampleBufferGetPresentationTimeStamp(sample).value
+                let imageBufferRef = CMSampleBufferGetImageBuffer(sample)
+                while !writerInput.isReadyForMoreMediaData {
+                    Thread.sleep(forTimeInterval: 0.1)
+                }
+                pixelBufferAdaptor.append(imageBufferRef!, withPresentationTime: presentationTime)
             }
-            pixelBufferAdaptor.append(imageBufferRef!, withPresentationTime: presentationTime)
-//            print("presentationTime = \(presentationTime)")
-        }
-        
-        writer.finishWriting {
-            completion(AVAsset(url: outputURL))
+            
+            writer.finishWriting {
+                DispatchQueue.main.async {
+                    completion(AVAsset(url: outputURL))
+                }
+            }
         }
     }
     
@@ -215,30 +226,33 @@ class AVUtilities {
         writer.startWriting()
         writer.startSession(atSourceTime: CMSampleBufferGetPresentationTimeStamp(samples.first!))
         
-        
-        for sample in samples {
-            let presentationTime = CMSampleBufferGetPresentationTimeStamp(sample)
-            let imageBufferRef = CMSampleBufferGetImageBuffer(sample)
-            while !writerInput.isReadyForMoreMediaData {
-                Thread.sleep(forTimeInterval: 0.1)
+        videoQueue.async {
+            for sample in samples {
+                let presentationTime = CMSampleBufferGetPresentationTimeStamp(sample)
+                let imageBufferRef = CMSampleBufferGetImageBuffer(sample)
+                while !writerInput.isReadyForMoreMediaData {
+                    Thread.sleep(forTimeInterval: 0.1)
+                }
+                pixelBufferAdaptor.append(imageBufferRef!, withPresentationTime: presentationTime)
             }
-            pixelBufferAdaptor.append(imageBufferRef!, withPresentationTime: presentationTime)
-            //            print("presentationTime = \(presentationTime)")
-        }
-        var time = CMSampleBufferGetPresentationTimeStamp(samples.last!)
-        for (index, _) in samples.enumerated() {
+            var time = CMSampleBufferGetPresentationTimeStamp(samples.last!)
             time.value += 20
-            let presentationTime = time
-            let imageBufferRef = CMSampleBufferGetImageBuffer(samples[samples.count - 1 - index])
-            while !writerInput.isReadyForMoreMediaData {
-                Thread.sleep(forTimeInterval: 0.1)
+            for (index, sample) in samples.enumerated() {
+                var presentationTime = time
+                presentationTime.value += CMSampleBufferGetPresentationTimeStamp(sample).value
+                let imageBufferRef = CMSampleBufferGetImageBuffer(samples[samples.count - 1 - index])
+                while !writerInput.isReadyForMoreMediaData {
+                    Thread.sleep(forTimeInterval: 0.1)
+                }
+                pixelBufferAdaptor.append(imageBufferRef!, withPresentationTime: presentationTime)
+                
             }
-            pixelBufferAdaptor.append(imageBufferRef!, withPresentationTime: presentationTime)
             
-        }
-        
-        writer.finishWriting {
-            completion(AVAsset(url: outputURL))
+            writer.finishWriting {
+                DispatchQueue.main.async {
+                    completion(AVAsset(url: outputURL))
+                }
+            }
         }
     }
 }
