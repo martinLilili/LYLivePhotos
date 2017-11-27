@@ -25,6 +25,12 @@ class LYPhotoEditViewController: UIViewController {
     let loopURL = URL(fileURLWithPath: (NSTemporaryDirectory()).appending("tempLoopVideo.mov"))
     let playBackURL = URL(fileURLWithPath: (NSTemporaryDirectory()).appending("tempPlayBackVideo.mov"))
     
+    @IBOutlet weak var originalBtn: UIButton!
+    
+    @IBOutlet weak var loopBtn: UIButton!
+    
+    @IBOutlet weak var playbackBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         removeFileIfExists(fileURL: loopURL)
@@ -46,7 +52,6 @@ class LYPhotoEditViewController: UIViewController {
                     if error != nil{
                         print("Could not write video file")
                     } else {
-                        
                         let item = AVPlayerItem(url: self.movieURL)
                         let player = AVPlayer(playerItem: item)
                         self.layer.player = player
@@ -54,9 +59,10 @@ class LYPhotoEditViewController: UIViewController {
                         self.view.layer.addSublayer(self.layer)
                         player.play()
                         self.outputURL = self.movieURL
+                        self.originalBtn.backgroundColor = UIColor.blue
+                        self.originalBtn.setTitleColor(UIColor.white, for: .normal)
                     }
                 }
-                
                 break
             }
         }
@@ -131,6 +137,22 @@ class LYPhotoEditViewController: UIViewController {
         }
     }
     
+    @IBAction func originalBtnClicked(_ sender: UIButton) {
+        if fileExist(fileURL: movieURL) {
+            let item = AVPlayerItem(url: self.movieURL)
+            let player = AVPlayer(playerItem: item)
+            self.layer.player = player
+            player.play()
+            self.outputURL = self.movieURL
+            self.originalBtn.backgroundColor = UIColor.blue
+            self.originalBtn.setTitleColor(UIColor.white, for: .normal)
+            self.loopBtn.backgroundColor = UIColor.white
+            self.loopBtn.setTitleColor(UIColor.blue, for: .normal)
+            self.playbackBtn.backgroundColor = UIColor.white
+            self.playbackBtn.setTitleColor(UIColor.blue, for: .normal)
+        }
+    }
+    
     @IBAction func loopBtnClicked(_ sender: UIButton) {
         if fileExist(fileURL: loopURL) {
             let item = AVPlayerItem(url: self.loopURL)
@@ -141,16 +163,20 @@ class LYPhotoEditViewController: UIViewController {
         } else {
             SVProgressHUD.show(withStatus: "处理中")
             AVUtilities.loop(AVURLAsset(url: self.movieURL), outputURL: loopURL) { (asset) in
-                DispatchQueue.main.async {
-                    let item = AVPlayerItem(url: self.loopURL)
-                    let player = AVPlayer(playerItem: item)
-                    self.layer.player = player
-                    player.play()
-                    self.outputURL = self.loopURL
-                    SVProgressHUD.dismiss()
-                }
+                let item = AVPlayerItem(url: self.loopURL)
+                let player = AVPlayer(playerItem: item)
+                self.layer.player = player
+                player.play()
+                self.outputURL = self.loopURL
+                SVProgressHUD.dismiss()
             }
         }
+        self.originalBtn.backgroundColor = UIColor.white
+        self.originalBtn.setTitleColor(UIColor.blue, for: .normal)
+        self.loopBtn.backgroundColor = UIColor.blue
+        self.loopBtn.setTitleColor(UIColor.white, for: .normal)
+        self.playbackBtn.backgroundColor = UIColor.white
+        self.playbackBtn.setTitleColor(UIColor.blue, for: .normal)
     }
     
     @IBAction func playBackBtnClicked(_ sender: UIButton) {
@@ -163,15 +189,19 @@ class LYPhotoEditViewController: UIViewController {
         } else {
             SVProgressHUD.show(withStatus: "处理中")
             AVUtilities.playback(AVURLAsset(url: self.movieURL), outputURL: playBackURL) { (asset) in
-                DispatchQueue.main.async {
-                    let item = AVPlayerItem(url: self.playBackURL)
-                    let player = AVPlayer(playerItem: item)
-                    self.layer.player = player
-                    player.play()
-                    self.outputURL = self.playBackURL
-                    SVProgressHUD.dismiss()
-                }
+                let item = AVPlayerItem(url: self.playBackURL)
+                let player = AVPlayer(playerItem: item)
+                self.layer.player = player
+                player.play()
+                self.outputURL = self.playBackURL
+                SVProgressHUD.dismiss()
             }
         }
+        self.originalBtn.backgroundColor = UIColor.white
+        self.originalBtn.setTitleColor(UIColor.blue, for: .normal)
+        self.loopBtn.backgroundColor = UIColor.white
+        self.loopBtn.setTitleColor(UIColor.blue, for: .normal)
+        self.playbackBtn.backgroundColor = UIColor.blue
+        self.playbackBtn.setTitleColor(UIColor.white, for: .normal)
     }
 }

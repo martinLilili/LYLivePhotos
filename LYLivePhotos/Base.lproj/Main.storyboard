@@ -85,32 +85,59 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bAL-cV-XsO">
-                                <rect key="frame" x="29" y="608" width="96" height="30"/>
+                                <rect key="frame" x="125" y="607" width="125" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="96" id="deS-rc-fjz"/>
+                                    <constraint firstAttribute="height" constant="60" id="GEC-z7-7QP"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="循环播放"/>
                                 <connections>
                                     <action selector="loopBtnClicked:" destination="whw-sN-NES" eventType="touchUpInside" id="eJo-p2-nHT"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sVl-yw-HCH">
-                                <rect key="frame" x="284" y="608" width="62" height="30"/>
+                                <rect key="frame" x="250" y="607" width="125" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="zPA-77-ymM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="来回播放"/>
                                 <connections>
                                     <action selector="playBackBtnClicked:" destination="whw-sN-NES" eventType="touchUpInside" id="MSd-Qd-psK"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cpv-7d-aV4">
+                                <rect key="frame" x="0.0" y="607" width="125" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Gjt-b3-ttx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="原视频"/>
+                                <connections>
+                                    <action selector="originalBtnClicked:" destination="whw-sN-NES" eventType="touchUpInside" id="ReK-98-t9d"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Vbr-FE-NX2" firstAttribute="trailing" secondItem="sVl-yw-HCH" secondAttribute="trailing" constant="29" id="ApU-pv-oRa"/>
-                            <constraint firstItem="sVl-yw-HCH" firstAttribute="baseline" secondItem="bAL-cV-XsO" secondAttribute="baseline" id="EYc-qQ-ESE"/>
-                            <constraint firstItem="bAL-cV-XsO" firstAttribute="leading" secondItem="Vbr-FE-NX2" secondAttribute="leading" constant="29" id="eeY-LX-q6D"/>
-                            <constraint firstItem="Vbr-FE-NX2" firstAttribute="bottom" secondItem="bAL-cV-XsO" secondAttribute="bottom" constant="29" id="qa0-hV-7hq"/>
+                            <constraint firstItem="cpv-7d-aV4" firstAttribute="leading" secondItem="4Vq-lJ-onf" secondAttribute="leading" id="2d4-bq-8OB"/>
+                            <constraint firstItem="bAL-cV-XsO" firstAttribute="centerY" secondItem="cpv-7d-aV4" secondAttribute="centerY" id="3M6-fq-iRM"/>
+                            <constraint firstItem="bAL-cV-XsO" firstAttribute="width" secondItem="sVl-yw-HCH" secondAttribute="width" id="7nQ-23-KVc"/>
+                            <constraint firstItem="bAL-cV-XsO" firstAttribute="centerY" secondItem="sVl-yw-HCH" secondAttribute="centerY" id="BoM-fh-jKd"/>
+                            <constraint firstItem="sVl-yw-HCH" firstAttribute="leading" secondItem="bAL-cV-XsO" secondAttribute="trailing" id="Om5-qS-bp8"/>
+                            <constraint firstAttribute="bottom" secondItem="cpv-7d-aV4" secondAttribute="bottom" id="P5d-4R-6Wz"/>
+                            <constraint firstItem="bAL-cV-XsO" firstAttribute="leading" secondItem="cpv-7d-aV4" secondAttribute="trailing" id="Tag-Zo-4Eh"/>
+                            <constraint firstAttribute="bottom" secondItem="sVl-yw-HCH" secondAttribute="bottom" id="bg5-Hd-k1x"/>
+                            <constraint firstItem="cpv-7d-aV4" firstAttribute="width" secondItem="bAL-cV-XsO" secondAttribute="width" id="hKK-Bx-jF6"/>
+                            <constraint firstAttribute="trailing" secondItem="sVl-yw-HCH" secondAttribute="trailing" id="u6j-GQ-VBC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Vbr-FE-NX2"/>
                     </view>
+                    <connections>
+                        <outlet property="loopBtn" destination="bAL-cV-XsO" id="cEf-9n-qzC"/>
+                        <outlet property="originalBtn" destination="cpv-7d-aV4" id="YGH-pN-qm5"/>
+                        <outlet property="playbackBtn" destination="sVl-yw-HCH" id="cqc-v6-eFp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fNz-zj-6P1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
