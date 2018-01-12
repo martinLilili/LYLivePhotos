@@ -85,16 +85,20 @@ class LYPhotoEditViewController: UIViewController {
     
     @objc func rightBtnClicked() {
         if let url = self.outputURL {
-            PHPhotoLibrary.shared().performChanges({
-                PHAssetChangeRequest.creationRequestForAssetFromVideo(atFileURL: url)
-            }, completionHandler: { (isSuccess, error) in
-                if isSuccess {
-                    SVProgressHUD.showSuccess(withStatus: "保存成功，请到相册中查看")
-                } else{
-                    SVProgressHUD.showError(withStatus: "保存失败：\(error!.localizedDescription)")
-                }
-            })
+            saveToAlbum(url: url)
         }
+    }
+    
+    func saveToAlbum(url : URL) {
+        PHPhotoLibrary.shared().performChanges({
+            PHAssetChangeRequest.creationRequestForAssetFromVideo(atFileURL: url)
+        }, completionHandler: { (isSuccess, error) in
+            if isSuccess {
+                SVProgressHUD.showSuccess(withStatus: "保存成功，请到相册中查看")
+            } else{
+                SVProgressHUD.showError(withStatus: "保存失败：\(error!.localizedDescription)")
+            }
+        })
     }
     
     func removeFileIfExists(fileURL : URL) {
