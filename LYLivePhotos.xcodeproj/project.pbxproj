@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED4A4A0A2007320900D4201E /* GTMRefreshConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4A49FB2007320800D4201E /* GTMRefreshConstant.swift */; };
+		ED4A4A0B2007320900D4201E /* GTMLoadMoreFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4A49FC2007320800D4201E /* GTMLoadMoreFooter.swift */; };
+		ED4A4A0C2007320900D4201E /* GTMRefreshHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4A49FD2007320800D4201E /* GTMRefreshHeader.swift */; };
+		ED4A4A0D2007320900D4201E /* GTMRefreshStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4A49FE2007320800D4201E /* GTMRefreshStyle.swift */; };
+		ED4A4A0E2007320900D4201E /* GTMRefreshComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4A49FF2007320800D4201E /* GTMRefreshComponent.swift */; };
+		ED4A4A0F2007320900D4201E /* arrow_down@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED4A4A012007320800D4201E /* arrow_down@3x.png */; };
+		ED4A4A102007320900D4201E /* Localize.strings in Resources */ = {isa = PBXBuildFile; fileRef = ED4A4A022007320800D4201E /* Localize.strings */; };
+		ED4A4A112007320900D4201E /* success@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED4A4A052007320800D4201E /* success@3x.png */; };
+		ED4A4A122007320900D4201E /* failure@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED4A4A072007320800D4201E /* failure@3x.png */; };
+		ED4A4A132007320900D4201E /* GTMRefreshExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4A4A082007320800D4201E /* GTMRefreshExtension.swift */; };
+		ED4A4A142007320900D4201E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ED4A4A092007320800D4201E /* Info.plist */; };
 		ED6058A81FC0182F00B38034 /* PhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6058A71FC0182F00B38034 /* PhotosCollectionViewController.swift */; };
 		ED6058AA1FC018B300B38034 /* PhotosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6058A91FC018B300B38034 /* PhotosCollectionViewCell.swift */; };
 		ED627FD61FC3D2CC00CEDB89 /* LYPhotoEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED627FD51FC3D2CC00CEDB89 /* LYPhotoEditViewController.swift */; };
@@ -69,6 +80,19 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		ED4A49FB2007320800D4201E /* GTMRefreshConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTMRefreshConstant.swift; sourceTree = "<group>"; };
+		ED4A49FC2007320800D4201E /* GTMLoadMoreFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTMLoadMoreFooter.swift; sourceTree = "<group>"; };
+		ED4A49FD2007320800D4201E /* GTMRefreshHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTMRefreshHeader.swift; sourceTree = "<group>"; };
+		ED4A49FE2007320800D4201E /* GTMRefreshStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTMRefreshStyle.swift; sourceTree = "<group>"; };
+		ED4A49FF2007320800D4201E /* GTMRefreshComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTMRefreshComponent.swift; sourceTree = "<group>"; };
+		ED4A4A012007320800D4201E /* arrow_down@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow_down@3x.png"; sourceTree = "<group>"; };
+		ED4A4A032007320800D4201E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localize.strings"; sourceTree = "<group>"; };
+		ED4A4A042007320800D4201E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localize.strings; sourceTree = "<group>"; };
+		ED4A4A052007320800D4201E /* success@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "success@3x.png"; sourceTree = "<group>"; };
+		ED4A4A062007320800D4201E /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localize.strings; sourceTree = "<group>"; };
+		ED4A4A072007320800D4201E /* failure@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "failure@3x.png"; sourceTree = "<group>"; };
+		ED4A4A082007320800D4201E /* GTMRefreshExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTMRefreshExtension.swift; sourceTree = "<group>"; };
+		ED4A4A092007320800D4201E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED6058A71FC0182F00B38034 /* PhotosCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewController.swift; sourceTree = "<group>"; };
 		ED6058A91FC018B300B38034 /* PhotosCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewCell.swift; sourceTree = "<group>"; };
 		ED627FD51FC3D2CC00CEDB89 /* LYPhotoEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LYPhotoEditViewController.swift; sourceTree = "<group>"; };
@@ -139,6 +163,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ED4A49FA2007320800D4201E /* GTMRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				ED4A49FB2007320800D4201E /* GTMRefreshConstant.swift */,
+				ED4A49FC2007320800D4201E /* GTMLoadMoreFooter.swift */,
+				ED4A49FD2007320800D4201E /* GTMRefreshHeader.swift */,
+				ED4A49FE2007320800D4201E /* GTMRefreshStyle.swift */,
+				ED4A49FF2007320800D4201E /* GTMRefreshComponent.swift */,
+				ED4A4A002007320800D4201E /* Resource */,
+				ED4A4A082007320800D4201E /* GTMRefreshExtension.swift */,
+				ED4A4A092007320800D4201E /* Info.plist */,
+			);
+			path = GTMRefresh;
+			sourceTree = "<group>";
+		};
+		ED4A4A002007320800D4201E /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				ED4A4A012007320800D4201E /* arrow_down@3x.png */,
+				ED4A4A022007320800D4201E /* Localize.strings */,
+				ED4A4A052007320800D4201E /* success@3x.png */,
+				ED4A4A072007320800D4201E /* failure@3x.png */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		ED68A4941FC94E4300E73C4C /* SVProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +232,7 @@
 		EDA43B301FBEB25600F3A9B2 /* LYLivePhotos */ = {
 			isa = PBXGroup;
 			children = (
+				ED4A49FA2007320800D4201E /* GTMRefresh */,
 				ED68A4941FC94E4300E73C4C /* SVProgressHUD */,
 				ED627FD71FC3D7C300CEDB89 /* AVUtilities.swift */,
 				EDA43B311FBEB25600F3A9B2 /* AppDelegate.swift */,
@@ -349,6 +400,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = EDA43B251FBEB25600F3A9B2;
 			productRefGroup = EDA43B2F1FBEB25600F3A9B2 /* Products */;
@@ -369,9 +421,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDA43B3C1FBEB25600F3A9B2 /* LaunchScreen.storyboard in Resources */,
+				ED4A4A112007320900D4201E /* success@3x.png in Resources */,
+				ED4A4A142007320900D4201E /* Info.plist in Resources */,
 				EDA43B391FBEB25600F3A9B2 /* Assets.xcassets in Resources */,
 				EDA43B371FBEB25600F3A9B2 /* Main.storyboard in Resources */,
+				ED4A4A122007320900D4201E /* failure@3x.png in Resources */,
+				ED4A4A0F2007320900D4201E /* arrow_down@3x.png in Resources */,
 				ED68A4A31FC94E4300E73C4C /* SVProgressHUD.bundle in Resources */,
+				ED4A4A102007320900D4201E /* Localize.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,14 +462,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDA43B321FBEB25600F3A9B2 /* AppDelegate.swift in Sources */,
+				ED4A4A0D2007320900D4201E /* GTMRefreshStyle.swift in Sources */,
+				ED4A4A0E2007320900D4201E /* GTMRefreshComponent.swift in Sources */,
 				ED68A4A11FC94E4300E73C4C /* SVProgressHUD.m in Sources */,
 				ED68A4A21FC94E4300E73C4C /* SVIndefiniteAnimatedView.m in Sources */,
 				ED68A49F1FC94E4300E73C4C /* SVRadialGradientLayer.m in Sources */,
 				ED6058A81FC0182F00B38034 /* PhotosCollectionViewController.swift in Sources */,
+				ED4A4A0C2007320900D4201E /* GTMRefreshHeader.swift in Sources */,
 				ED68A4A01FC94E4300E73C4C /* SVProgressAnimatedView.m in Sources */,
+				ED4A4A0A2007320900D4201E /* GTMRefreshConstant.swift in Sources */,
 				ED627FD61FC3D2CC00CEDB89 /* LYPhotoEditViewController.swift in Sources */,
 				ED6058AA1FC018B300B38034 /* PhotosCollectionViewCell.swift in Sources */,
+				ED4A4A132007320900D4201E /* GTMRefreshExtension.swift in Sources */,
 				ED627FD81FC3D7C300CEDB89 /* AVUtilities.swift in Sources */,
+				ED4A4A0B2007320900D4201E /* GTMLoadMoreFooter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,6 +525,16 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		ED4A4A022007320800D4201E /* Localize.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ED4A4A032007320800D4201E /* zh-Hans */,
+				ED4A4A042007320800D4201E /* en */,
+				ED4A4A062007320800D4201E /* Base */,
+			);
+			name = Localize.strings;
+			sourceTree = "<group>";
+		};
 		EDA43B351FBEB25600F3A9B2 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -601,10 +674,12 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 37DXBWQK86;
 				INFOPLIST_FILE = LYLivePhotos/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.liyue.LYLivePhotos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -620,10 +695,12 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 37DXBWQK86;
 				INFOPLIST_FILE = LYLivePhotos/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.liyue.LYLivePhotos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -706,8 +783,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 37DXBWQK86;
 				INFOPLIST_FILE = LYLivePhotoEdit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.liyue.LYLivePhotos.LYLivePhotoEdit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.liyue.LYLivePhotos.Edit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "LYLivePhotos/LYLivePhotoEdit-Bridging-Header.h";
@@ -724,8 +802,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 37DXBWQK86;
 				INFOPLIST_FILE = LYLivePhotoEdit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.liyue.LYLivePhotos.LYLivePhotoEdit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.liyue.LYLivePhotos.Edit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "LYLivePhotos/LYLivePhotoEdit-Bridging-Header.h";

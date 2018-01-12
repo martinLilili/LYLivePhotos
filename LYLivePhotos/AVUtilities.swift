@@ -45,12 +45,22 @@ class AVUtilities {
         }
         
         let videoCompositionProps = [AVVideoAverageBitRateKey: videoTrack.estimatedDataRate]
-        let writerOutputSettings = [
-            AVVideoCodecKey: AVVideoCodecType.h264,
-            AVVideoWidthKey: videoTrack.naturalSize.width,
-            AVVideoHeightKey: videoTrack.naturalSize.height,
-            AVVideoCompressionPropertiesKey: videoCompositionProps
-            ] as [String : Any]
+        var writerOutputSettings = [String : Any]()
+        if #available(iOS 11.0, *) {
+            writerOutputSettings = [
+                AVVideoCodecKey: AVVideoCodecType.h264,
+                AVVideoWidthKey: videoTrack.naturalSize.width,
+                AVVideoHeightKey: videoTrack.naturalSize.height,
+                AVVideoCompressionPropertiesKey: videoCompositionProps
+                ] as [String : Any]
+        } else {
+            writerOutputSettings = [
+                AVVideoCodecKey: AVVideoCodecH264,
+                AVVideoWidthKey: videoTrack.naturalSize.width,
+                AVVideoHeightKey: videoTrack.naturalSize.height,
+                AVVideoCompressionPropertiesKey: videoCompositionProps
+                ] as [String : Any]
+        }
         
         let writerInput = AVAssetWriterInput(mediaType: AVMediaType.video, outputSettings: writerOutputSettings)
         writerInput.expectsMediaDataInRealTime = false
@@ -124,12 +134,22 @@ class AVUtilities {
             }
             
             let videoCompositionProps = [AVVideoAverageBitRateKey: videoTrack.estimatedDataRate]
-            let writerOutputSettings = [
-                AVVideoCodecKey: AVVideoCodecType.h264,
-                AVVideoWidthKey: videoTrack.naturalSize.width,
-                AVVideoHeightKey: videoTrack.naturalSize.height,
-                AVVideoCompressionPropertiesKey: videoCompositionProps
-                ] as [String : Any]
+            var writerOutputSettings = [String : Any]()
+            if #available(iOS 11.0, *) {
+                writerOutputSettings = [
+                    AVVideoCodecKey: AVVideoCodecType.h264,
+                    AVVideoWidthKey: videoTrack.naturalSize.width,
+                    AVVideoHeightKey: videoTrack.naturalSize.height,
+                    AVVideoCompressionPropertiesKey: videoCompositionProps
+                    ] as [String : Any]
+            } else {
+                writerOutputSettings = [
+                    AVVideoCodecKey: AVVideoCodecH264,
+                    AVVideoWidthKey: videoTrack.naturalSize.width,
+                    AVVideoHeightKey: videoTrack.naturalSize.height,
+                    AVVideoCompressionPropertiesKey: videoCompositionProps
+                    ] as [String : Any]
+            }
             
             let writerInput = AVAssetWriterInput(mediaType: AVMediaType.video, outputSettings: writerOutputSettings)
             writerInput.expectsMediaDataInRealTime = false
@@ -211,12 +231,22 @@ class AVUtilities {
             }
             
             let videoCompositionProps = [AVVideoAverageBitRateKey: videoTrack.estimatedDataRate]
-            let writerOutputSettings = [
-                AVVideoCodecKey: AVVideoCodecType.h264,
-                AVVideoWidthKey: videoTrack.naturalSize.width,
-                AVVideoHeightKey: videoTrack.naturalSize.height,
-                AVVideoCompressionPropertiesKey: videoCompositionProps
-                ] as [String : Any]
+            var writerOutputSettings = [String : Any]()
+            if #available(iOS 11.0, *) {
+                writerOutputSettings = [
+                    AVVideoCodecKey: AVVideoCodecType.h264,
+                    AVVideoWidthKey: videoTrack.naturalSize.width,
+                    AVVideoHeightKey: videoTrack.naturalSize.height,
+                    AVVideoCompressionPropertiesKey: videoCompositionProps
+                    ] as [String : Any]
+            } else {
+                writerOutputSettings = [
+                    AVVideoCodecKey: AVVideoCodecH264,
+                    AVVideoWidthKey: videoTrack.naturalSize.width,
+                    AVVideoHeightKey: videoTrack.naturalSize.height,
+                    AVVideoCompressionPropertiesKey: videoCompositionProps
+                    ] as [String : Any]
+            }
             
             let writerInput = AVAssetWriterInput(mediaType: AVMediaType.video, outputSettings: writerOutputSettings)
             writerInput.expectsMediaDataInRealTime = false

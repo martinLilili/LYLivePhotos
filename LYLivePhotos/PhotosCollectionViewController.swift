@@ -34,6 +34,12 @@ class PhotosCollectionViewController: UICollectionViewController {
                 self.showNoPhotoAccessAlert()
             }
         }
+
+        self.collectionView?.gtm_addRefreshHeaderView {
+            [weak self] in
+            print("excute refreshBlock")
+            self?.fetchPhotos()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -56,6 +62,7 @@ class PhotosCollectionViewController: UICollectionViewController {
             self.livePhotoAssets = PHAsset.fetchAssets(with: options)
             
             DispatchQueue.main.async {
+                self.collectionView?.endRefreshing(isSuccess: true)
                 self.collectionView?.reloadData()
             }
         }
@@ -109,8 +116,8 @@ class PhotosCollectionViewController: UICollectionViewController {
             let options = PHImageRequestOptions()
             options.isNetworkAccessAllowed = true
             
-            let targetSize = CGSize(width: 100, height: 100)
-            PHImageManager.default().requestImage(for: asset, targetSize: targetSize, contentMode: .aspectFill, options: options, resultHandler: { (image: UIImage?, info: [AnyHashable : Any]?) in
+            let targetSize = CGSize(width: 200, height: 200)
+            PHImageManager.default().requestImage(for: asset, targetSize: targetSize, contentMode: .aspectFit, options: options, resultHandler: { (image: UIImage?, info: [AnyHashable : Any]?) in
                 cell.imageView.image = image
             })
         }

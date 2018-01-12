@@ -137,21 +137,21 @@ extension PhotoEditingViewController : PHContentEditingController {
     func finishContentEditing(completionHandler: @escaping ((PHContentEditingOutput?) -> Void)) {
         // Update UI to reflect that editing has finished and output is being rendered.
         
-        // Render and provide output on a background queue.
-        DispatchQueue.global().async {
-            // Create editing output from the editing input.
-            let output = PHContentEditingOutput(contentEditingInput: self.input!)
-            
-            // Provide new adjustments and render output to given location.
-            // output.adjustmentData = <#new adjustment data#>
-            // let renderedJPEGData = <#output JPEG#>
-            // renderedJPEGData.writeToURL(output.renderedContentURL, atomically: true)
-            
-            // Call completion handler to commit edit to Photos.
-            completionHandler(output)
-            
-            // Clean up temporary files, etc.
-        }
+//        // Render and provide output on a background queue.
+//        DispatchQueue.global().async {
+//            // Create editing output from the editing input.
+//            let output = PHContentEditingOutput(contentEditingInput: self.input!)
+//            
+//            // Provide new adjustments and render output to given location.
+//            // output.adjustmentData = <#new adjustment data#>
+//            // let renderedJPEGData = <#output JPEG#>
+//            // renderedJPEGData.writeToURL(output.renderedContentURL, atomically: true)
+//            
+//            // Call completion handler to commit edit to Photos.
+//            completionHandler(output)
+//            
+//            // Clean up temporary files, etc.
+//        }
     }
     
     var shouldShowCancelConfirmation: Bool {
@@ -163,5 +163,6 @@ extension PhotoEditingViewController : PHContentEditingController {
     func cancelContentEditing() {
         // Clean up temporary files, etc.
         // May be called after finishContentEditingWithCompletionHandler: while you prepare output.
+        print("livePhotoContext")
     }
 }

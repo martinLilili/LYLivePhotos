@@ -31,6 +31,12 @@ class LYPhotoEditViewController: UIViewController {
     
     @IBOutlet weak var playbackBtn: UIButton!
     
+    @IBOutlet weak var playBtn: UIButton! {
+        didSet {
+            playBtn.isHidden = true
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         removeFileIfExists(fileURL: loopURL)
@@ -38,11 +44,11 @@ class LYPhotoEditViewController: UIViewController {
         let rightBtn = UIBarButtonItem(title: "保存视频", style: .done, target: self, action: #selector(LYPhotoEditViewController.rightBtnClicked))
         self.navigationItem.rightBarButtonItem = rightBtn
 
-        photoView = PHLivePhotoView(frame: CGRect.init(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.width))
-        photoView.contentMode = .scaleAspectFit
-        
-        self.view.addSubview(photoView)
+//        photoView = PHLivePhotoView(frame: CGRect.init(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.width))
+//        photoView.contentMode = .scaleAspectFit
+//        self.view.addSubview(photoView)
         // Do any additional setup after loading the view.
+        NotificationCenter.default.addObserver(self, selector: #selector(LYPhotoEditViewController.playEnd(no:)), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: nil)
         
         let resources = PHAssetResource.assetResources(for: self.livePhotoAsset!)
         for resource in resources {
@@ -65,6 +71,15 @@ class LYPhotoEditViewController: UIViewController {
                 }
                 break
             }
+        }
+    }
+    
+    @IBAction func playBtnClicked(_ sender: UIButton) {
+        
+        if let player = self.layer.player {
+            player.seek(to: CMTime(seconds: 0, preferredTimescale: 1))
+            player.play()
+            playBtn.isHidden = true
         }
     }
     
@@ -118,27 +133,26 @@ class LYPhotoEditViewController: UIViewController {
 //        configureView()
     }
     
-    func configureView() {
-        if let photoAsset = livePhotoAsset {
-            PHImageManager.default().requestLivePhoto(for: photoAsset, targetSize: photoView.frame.size, contentMode: .aspectFit, options: nil, resultHandler: { (photo: PHLivePhoto?, info: [AnyHashable : Any]?) in
-                
-                if let livePhoto = photo{
-                    self.photoView.livePhoto = livePhoto
-                    self.photoView.startPlayback(with: .full)
-                    
-                    let geoCoder = CLGeocoder()
-                    geoCoder.reverseGeocodeLocation(photoAsset.location!, completionHandler: { (placemark: [CLPlacemark]?, error: Error?) in
-                        if error == nil {
-                            self.navigationItem.title = placemark?.first?.locality
-                        }
-                    })
-                }
-            })
-        }
-    }
+//    func configureView() {
+//        if let photoAsset = livePhotoAsset {
+//            PHImageManager.default().requestLivePhoto(for: photoAsset, targetSize: photoView.frame.size, contentMode: .aspectFit, options: nil, resultHandler: { (photo: PHLivePhoto?, info: [AnyHashable : Any]?) in
+//                if let livePhoto = photo{
+//                    self.photoView.livePhoto = livePhoto
+//                    self.photoView.startPlayback(with: .full)
+//                    let geoCoder = CLGeocoder()
+//                    geoCoder.reverseGeocodeLocation(photoAsset.location!, completionHandler: { (placemark: [CLPlacemark]?, error: Error?) in
+//                        if error == nil {
+//                            self.navigationItem.title = placemark?.first?.locality
+//                        }
+//                    })
+//                }
+//            })
+//        }
+//    }
     
     @IBAction func originalBtnClicked(_ sender: UIButton) {
         if fileExist(fileURL: movieURL) {
+            playBtn.isHidden = true
             let item = AVPlayerItem(url: self.movieURL)
             let player = AVPlayer(playerItem: item)
             self.layer.player = player
@@ -154,6 +168,7 @@ class LYPhotoEditViewController: UIViewController {
     }
     
     @IBAction func loopBtnClicked(_ sender: UIButton) {
+        playBtn.isHidden = true
         if fileExist(fileURL: loopURL) {
             let item = AVPlayerItem(url: self.loopURL)
             let player = AVPlayer(playerItem: item)
@@ -180,6 +195,7 @@ class LYPhotoEditViewController: UIViewController {
     }
     
     @IBAction func playBackBtnClicked(_ sender: UIButton) {
+        playBtn.isHidden = true
         if fileExist(fileURL: playBackURL) {
             let item = AVPlayerItem(url: self.playBackURL)
             let player = AVPlayer(playerItem: item)
@@ -203,5 +219,10 @@ class LYPhotoEditViewController: UIViewController {
         self.loopBtn.setTitleColor(UIColor.blue, for: .normal)
         self.playbackBtn.backgroundColor = UIColor.blue
         self.playbackBtn.setTitleColor(UIColor.white, for: .normal)
+    }
+    
+    @objc func playEnd(no : Notification) {
+        self.view.bringSubview(toFront: playBtn)
+        playBtn.isHidden = false
     }
 }

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Vz0-h3-qQ9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Vz0-h3-qQ9">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -70,7 +70,7 @@
                             <outlet property="delegate" destination="gUh-8C-Vc9" id="hoH-Xp-iRa"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="LivePhotos" id="TjB-Qh-tdG"/>
+                    <navigationItem key="navigationItem" title="动感生活" id="TjB-Qh-tdG"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kbr-Z8-TKx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -117,6 +117,17 @@
                                     <action selector="originalBtnClicked:" destination="whw-sN-NES" eventType="touchUpInside" id="ReK-98-t9d"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zWu-26-Vlu">
+                                <rect key="frame" x="137" y="283" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="oao-aL-FfZ"/>
+                                    <constraint firstAttribute="height" constant="100" id="qEi-ST-sep"/>
+                                </constraints>
+                                <state key="normal" image="bt_kqjk01"/>
+                                <connections>
+                                    <action selector="playBtnClicked:" destination="whw-sN-NES" eventType="touchUpInside" id="uvM-7n-7C3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -124,6 +135,8 @@
                             <constraint firstItem="bAL-cV-XsO" firstAttribute="centerY" secondItem="cpv-7d-aV4" secondAttribute="centerY" id="3M6-fq-iRM"/>
                             <constraint firstItem="bAL-cV-XsO" firstAttribute="width" secondItem="sVl-yw-HCH" secondAttribute="width" id="7nQ-23-KVc"/>
                             <constraint firstItem="bAL-cV-XsO" firstAttribute="centerY" secondItem="sVl-yw-HCH" secondAttribute="centerY" id="BoM-fh-jKd"/>
+                            <constraint firstItem="zWu-26-Vlu" firstAttribute="centerX" secondItem="bAL-cV-XsO" secondAttribute="centerX" id="ILr-tx-ABK"/>
+                            <constraint firstItem="zWu-26-Vlu" firstAttribute="centerY" secondItem="4Vq-lJ-onf" secondAttribute="centerY" id="LwE-6S-Djb"/>
                             <constraint firstItem="sVl-yw-HCH" firstAttribute="leading" secondItem="bAL-cV-XsO" secondAttribute="trailing" id="Om5-qS-bp8"/>
                             <constraint firstAttribute="bottom" secondItem="cpv-7d-aV4" secondAttribute="bottom" id="P5d-4R-6Wz"/>
                             <constraint firstItem="bAL-cV-XsO" firstAttribute="leading" secondItem="cpv-7d-aV4" secondAttribute="trailing" id="Tag-Zo-4Eh"/>
@@ -136,6 +149,7 @@
                     <connections>
                         <outlet property="loopBtn" destination="bAL-cV-XsO" id="cEf-9n-qzC"/>
                         <outlet property="originalBtn" destination="cpv-7d-aV4" id="YGH-pN-qm5"/>
+                        <outlet property="playBtn" destination="zWu-26-Vlu" id="Q1j-aA-Lxb"/>
                         <outlet property="playbackBtn" destination="sVl-yw-HCH" id="cqc-v6-eFp"/>
                     </connections>
                 </viewController>
@@ -144,4 +158,7 @@
             <point key="canvasLocation" x="792.79999999999995" y="428.63568215892059"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bt_kqjk01" width="104" height="104"/>
+    </resources>
 </document>
