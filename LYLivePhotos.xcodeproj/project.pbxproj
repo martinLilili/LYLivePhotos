@@ -32,8 +32,6 @@
 		EDA43B371FBEB25600F3A9B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDA43B351FBEB25600F3A9B2 /* Main.storyboard */; };
 		EDA43B391FBEB25600F3A9B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDA43B381FBEB25600F3A9B2 /* Assets.xcassets */; };
 		EDA43B3C1FBEB25600F3A9B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDA43B3A1FBEB25600F3A9B2 /* LaunchScreen.storyboard */; };
-		EDA43B471FBEB25600F3A9B2 /* LYLivePhotosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA43B461FBEB25600F3A9B2 /* LYLivePhotosTests.swift */; };
-		EDA43B521FBEB25600F3A9B2 /* LYLivePhotosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA43B511FBEB25600F3A9B2 /* LYLivePhotosUITests.swift */; };
 		EDA43B661FBEB28600F3A9B2 /* PhotosUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDA43B651FBEB28600F3A9B2 /* PhotosUI.framework */; };
 		EDA43B681FBEB28600F3A9B2 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDA43B671FBEB28600F3A9B2 /* Photos.framework */; };
 		EDA43B6B1FBEB28600F3A9B2 /* PhotoEditingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA43B6A1FBEB28600F3A9B2 /* PhotoEditingViewController.swift */; };
@@ -42,20 +40,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		EDA43B431FBEB25600F3A9B2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EDA43B261FBEB25600F3A9B2 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EDA43B2D1FBEB25600F3A9B2;
-			remoteInfo = LYLivePhotos;
-		};
-		EDA43B4E1FBEB25600F3A9B2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EDA43B261FBEB25600F3A9B2 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EDA43B2D1FBEB25600F3A9B2;
-			remoteInfo = LYLivePhotos;
-		};
 		EDA43B701FBEB28600F3A9B2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EDA43B261FBEB25600F3A9B2 /* Project object */;
@@ -115,12 +99,6 @@
 		EDA43B381FBEB25600F3A9B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EDA43B3B1FBEB25600F3A9B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EDA43B3D1FBEB25600F3A9B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EDA43B421FBEB25600F3A9B2 /* LYLivePhotosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LYLivePhotosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EDA43B461FBEB25600F3A9B2 /* LYLivePhotosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LYLivePhotosTests.swift; sourceTree = "<group>"; };
-		EDA43B481FBEB25600F3A9B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EDA43B4D1FBEB25600F3A9B2 /* LYLivePhotosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LYLivePhotosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EDA43B511FBEB25600F3A9B2 /* LYLivePhotosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LYLivePhotosUITests.swift; sourceTree = "<group>"; };
-		EDA43B531FBEB25600F3A9B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDA43B631FBEB28600F3A9B2 /* LYLivePhotoEdit.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = LYLivePhotoEdit.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDA43B651FBEB28600F3A9B2 /* PhotosUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PhotosUI.framework; path = System/Library/Frameworks/PhotosUI.framework; sourceTree = SDKROOT; };
 		EDA43B671FBEB28600F3A9B2 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
@@ -131,20 +109,6 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		EDA43B2B1FBEB25600F3A9B2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EDA43B3F1FBEB25600F3A9B2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EDA43B4A1FBEB25600F3A9B2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -210,8 +174,6 @@
 			isa = PBXGroup;
 			children = (
 				EDA43B301FBEB25600F3A9B2 /* LYLivePhotos */,
-				EDA43B451FBEB25600F3A9B2 /* LYLivePhotosTests */,
-				EDA43B501FBEB25600F3A9B2 /* LYLivePhotosUITests */,
 				EDA43B691FBEB28600F3A9B2 /* LYLivePhotoEdit */,
 				EDA43B641FBEB28600F3A9B2 /* Frameworks */,
 				EDA43B2F1FBEB25600F3A9B2 /* Products */,
@@ -222,8 +184,6 @@
 			isa = PBXGroup;
 			children = (
 				EDA43B2E1FBEB25600F3A9B2 /* LYLivePhotos.app */,
-				EDA43B421FBEB25600F3A9B2 /* LYLivePhotosTests.xctest */,
-				EDA43B4D1FBEB25600F3A9B2 /* LYLivePhotosUITests.xctest */,
 				EDA43B631FBEB28600F3A9B2 /* LYLivePhotoEdit.appex */,
 			);
 			name = Products;
@@ -247,24 +207,6 @@
 				ED68A4651FC9458300E73C4C /* LYLivePhotoEdit-Bridging-Header.h */,
 			);
 			path = LYLivePhotos;
-			sourceTree = "<group>";
-		};
-		EDA43B451FBEB25600F3A9B2 /* LYLivePhotosTests */ = {
-			isa = PBXGroup;
-			children = (
-				EDA43B461FBEB25600F3A9B2 /* LYLivePhotosTests.swift */,
-				EDA43B481FBEB25600F3A9B2 /* Info.plist */,
-			);
-			path = LYLivePhotosTests;
-			sourceTree = "<group>";
-		};
-		EDA43B501FBEB25600F3A9B2 /* LYLivePhotosUITests */ = {
-			isa = PBXGroup;
-			children = (
-				EDA43B511FBEB25600F3A9B2 /* LYLivePhotosUITests.swift */,
-				EDA43B531FBEB25600F3A9B2 /* Info.plist */,
-			);
-			path = LYLivePhotosUITests;
 			sourceTree = "<group>";
 		};
 		EDA43B641FBEB28600F3A9B2 /* Frameworks */ = {
@@ -308,42 +250,6 @@
 			productReference = EDA43B2E1FBEB25600F3A9B2 /* LYLivePhotos.app */;
 			productType = "com.apple.product-type.application";
 		};
-		EDA43B411FBEB25600F3A9B2 /* LYLivePhotosTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = EDA43B591FBEB25600F3A9B2 /* Build configuration list for PBXNativeTarget "LYLivePhotosTests" */;
-			buildPhases = (
-				EDA43B3E1FBEB25600F3A9B2 /* Sources */,
-				EDA43B3F1FBEB25600F3A9B2 /* Frameworks */,
-				EDA43B401FBEB25600F3A9B2 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				EDA43B441FBEB25600F3A9B2 /* PBXTargetDependency */,
-			);
-			name = LYLivePhotosTests;
-			productName = LYLivePhotosTests;
-			productReference = EDA43B421FBEB25600F3A9B2 /* LYLivePhotosTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		EDA43B4C1FBEB25600F3A9B2 /* LYLivePhotosUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = EDA43B5C1FBEB25600F3A9B2 /* Build configuration list for PBXNativeTarget "LYLivePhotosUITests" */;
-			buildPhases = (
-				EDA43B491FBEB25600F3A9B2 /* Sources */,
-				EDA43B4A1FBEB25600F3A9B2 /* Frameworks */,
-				EDA43B4B1FBEB25600F3A9B2 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				EDA43B4F1FBEB25600F3A9B2 /* PBXTargetDependency */,
-			);
-			name = LYLivePhotosUITests;
-			productName = LYLivePhotosUITests;
-			productReference = EDA43B4D1FBEB25600F3A9B2 /* LYLivePhotosUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 		EDA43B621FBEB28600F3A9B2 /* LYLivePhotoEdit */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EDA43B731FBEB28600F3A9B2 /* Build configuration list for PBXNativeTarget "LYLivePhotoEdit" */;
@@ -376,16 +282,6 @@
 						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 					};
-					EDA43B411FBEB25600F3A9B2 = {
-						CreatedOnToolsVersion = 9.1;
-						ProvisioningStyle = Automatic;
-						TestTargetID = EDA43B2D1FBEB25600F3A9B2;
-					};
-					EDA43B4C1FBEB25600F3A9B2 = {
-						CreatedOnToolsVersion = 9.1;
-						ProvisioningStyle = Automatic;
-						TestTargetID = EDA43B2D1FBEB25600F3A9B2;
-					};
 					EDA43B621FBEB28600F3A9B2 = {
 						CreatedOnToolsVersion = 9.1;
 						LastSwiftMigration = 0910;
@@ -408,8 +304,6 @@
 			projectRoot = "";
 			targets = (
 				EDA43B2D1FBEB25600F3A9B2 /* LYLivePhotos */,
-				EDA43B411FBEB25600F3A9B2 /* LYLivePhotosTests */,
-				EDA43B4C1FBEB25600F3A9B2 /* LYLivePhotosUITests */,
 				EDA43B621FBEB28600F3A9B2 /* LYLivePhotoEdit */,
 			);
 		};
@@ -429,20 +323,6 @@
 				ED4A4A0F2007320900D4201E /* arrow_down@3x.png in Resources */,
 				ED68A4A31FC94E4300E73C4C /* SVProgressHUD.bundle in Resources */,
 				ED4A4A102007320900D4201E /* Localize.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EDA43B401FBEB25600F3A9B2 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EDA43B4B1FBEB25600F3A9B2 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,22 +359,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EDA43B3E1FBEB25600F3A9B2 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EDA43B471FBEB25600F3A9B2 /* LYLivePhotosTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EDA43B491FBEB25600F3A9B2 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EDA43B521FBEB25600F3A9B2 /* LYLivePhotosUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		EDA43B5F1FBEB28600F3A9B2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -507,16 +371,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		EDA43B441FBEB25600F3A9B2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EDA43B2D1FBEB25600F3A9B2 /* LYLivePhotos */;
-			targetProxy = EDA43B431FBEB25600F3A9B2 /* PBXContainerItemProxy */;
-		};
-		EDA43B4F1FBEB25600F3A9B2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EDA43B2D1FBEB25600F3A9B2 /* LYLivePhotos */;
-			targetProxy = EDA43B4E1FBEB25600F3A9B2 /* PBXContainerItemProxy */;
-		};
 		EDA43B711FBEB28600F3A9B2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = EDA43B621FBEB28600F3A9B2 /* LYLivePhotoEdit */;
@@ -710,72 +564,6 @@
 			};
 			name = Release;
 		};
-		EDA43B5A1FBEB25600F3A9B2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 37DXBWQK86;
-				INFOPLIST_FILE = LYLivePhotosTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.liyue.LYLivePhotos.LYLivePhotosTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LYLivePhotos.app/LYLivePhotos";
-			};
-			name = Debug;
-		};
-		EDA43B5B1FBEB25600F3A9B2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 37DXBWQK86;
-				INFOPLIST_FILE = LYLivePhotosTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.liyue.LYLivePhotos.LYLivePhotosTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LYLivePhotos.app/LYLivePhotos";
-			};
-			name = Release;
-		};
-		EDA43B5D1FBEB25600F3A9B2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 37DXBWQK86;
-				INFOPLIST_FILE = LYLivePhotosUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.liyue.LYLivePhotos.LYLivePhotosUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = LYLivePhotos;
-			};
-			name = Debug;
-		};
-		EDA43B5E1FBEB25600F3A9B2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 37DXBWQK86;
-				INFOPLIST_FILE = LYLivePhotosUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.liyue.LYLivePhotos.LYLivePhotosUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = LYLivePhotos;
-			};
-			name = Release;
-		};
 		EDA43B741FBEB28600F3A9B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -785,7 +573,7 @@
 				INFOPLIST_FILE = LYLivePhotoEdit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.liyue.LYLivePhotos.Edit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.liyue.LYLivePhotos.aaaa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "LYLivePhotos/LYLivePhotoEdit-Bridging-Header.h";
@@ -804,7 +592,7 @@
 				INFOPLIST_FILE = LYLivePhotoEdit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.liyue.LYLivePhotos.Edit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.liyue.LYLivePhotos.aaaa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "LYLivePhotos/LYLivePhotoEdit-Bridging-Header.h";
@@ -830,24 +618,6 @@
 			buildConfigurations = (
 				EDA43B571FBEB25600F3A9B2 /* Debug */,
 				EDA43B581FBEB25600F3A9B2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		EDA43B591FBEB25600F3A9B2 /* Build configuration list for PBXNativeTarget "LYLivePhotosTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				EDA43B5A1FBEB25600F3A9B2 /* Debug */,
-				EDA43B5B1FBEB25600F3A9B2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		EDA43B5C1FBEB25600F3A9B2 /* Build configuration list for PBXNativeTarget "LYLivePhotosUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				EDA43B5D1FBEB25600F3A9B2 /* Debug */,
-				EDA43B5E1FBEB25600F3A9B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

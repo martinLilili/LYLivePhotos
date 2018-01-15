@@ -188,6 +188,7 @@ class LYPhotoEditViewController: UIViewController {
                 player.play()
                 self.outputURL = self.loopURL
                 SVProgressHUD.dismiss()
+                self.playBtn.isHidden = true
             }
         }
         self.originalBtn.backgroundColor = UIColor.white
@@ -215,6 +216,7 @@ class LYPhotoEditViewController: UIViewController {
                 player.play()
                 self.outputURL = self.playBackURL
                 SVProgressHUD.dismiss()
+                self.playBtn.isHidden = true
             }
         }
         self.originalBtn.backgroundColor = UIColor.white
