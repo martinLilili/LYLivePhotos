@@ -17,7 +17,6 @@
 		ED4A4A112007320900D4201E /* success@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED4A4A052007320800D4201E /* success@3x.png */; };
 		ED4A4A122007320900D4201E /* failure@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED4A4A072007320800D4201E /* failure@3x.png */; };
 		ED4A4A132007320900D4201E /* GTMRefreshExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4A4A082007320800D4201E /* GTMRefreshExtension.swift */; };
-		ED4A4A142007320900D4201E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ED4A4A092007320800D4201E /* Info.plist */; };
 		ED6058A81FC0182F00B38034 /* PhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6058A71FC0182F00B38034 /* PhotosCollectionViewController.swift */; };
 		ED6058AA1FC018B300B38034 /* PhotosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6058A91FC018B300B38034 /* PhotosCollectionViewCell.swift */; };
 		ED627FD61FC3D2CC00CEDB89 /* LYPhotoEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED627FD51FC3D2CC00CEDB89 /* LYPhotoEditViewController.swift */; };
@@ -316,7 +315,6 @@
 			files = (
 				EDA43B3C1FBEB25600F3A9B2 /* LaunchScreen.storyboard in Resources */,
 				ED4A4A112007320900D4201E /* success@3x.png in Resources */,
-				ED4A4A142007320900D4201E /* Info.plist in Resources */,
 				EDA43B391FBEB25600F3A9B2 /* Assets.xcassets in Resources */,
 				EDA43B371FBEB25600F3A9B2 /* Main.storyboard in Resources */,
 				ED4A4A122007320900D4201E /* failure@3x.png in Resources */,
@@ -540,7 +538,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "LYLivePhotos/LYLivePhotos-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -560,7 +558,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "LYLivePhotos/LYLivePhotos-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

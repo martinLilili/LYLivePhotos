@@ -25,11 +25,23 @@ class LYPhotoEditViewController: UIViewController {
     let loopURL = URL(fileURLWithPath: (NSTemporaryDirectory()).appending("tempLoopVideo.mov"))
     let playBackURL = URL(fileURLWithPath: (NSTemporaryDirectory()).appending("tempPlayBackVideo.mov"))
     
-    @IBOutlet weak var originalBtn: UIButton!
+    @IBOutlet weak var originalBtn: UIButton! {
+        didSet {
+            originalBtn.layer.cornerRadius = 5
+        }
+    }
     
-    @IBOutlet weak var loopBtn: UIButton!
+    @IBOutlet weak var loopBtn: UIButton! {
+        didSet {
+            loopBtn.layer.cornerRadius = 5
+        }
+    }
     
-    @IBOutlet weak var playbackBtn: UIButton!
+    @IBOutlet weak var playbackBtn: UIButton! {
+        didSet {
+            playbackBtn.layer.cornerRadius = 5
+        }
+    }
     
     @IBOutlet weak var playBtn: UIButton! {
         didSet {
@@ -53,20 +65,27 @@ class LYPhotoEditViewController: UIViewController {
         let resources = PHAssetResource.assetResources(for: self.livePhotoAsset!)
         for resource in resources {
             if resource.type == .pairedVideo {
+                SVProgressHUD.show(withStatus: "")
                 self.removeFileIfExists(fileURL: movieURL)
-                PHAssetResourceManager.default().writeData(for: resource, toFile: movieURL as URL, options: nil) { (error) in
+                let options = PHAssetResourceRequestOptions()
+                options.isNetworkAccessAllowed = true
+                PHAssetResourceManager.default().writeData(for: resource, toFile: movieURL as URL, options: options) { (error) in
                     if error != nil{
                         print("Could not write video file")
+                        SVProgressHUD.dismiss()
                     } else {
-                        let item = AVPlayerItem(url: self.movieURL)
-                        let player = AVPlayer(playerItem: item)
-                        self.layer.player = player
-                        self.layer.frame = self.view.frame
-                        self.view.layer.addSublayer(self.layer)
-                        player.play()
-                        self.outputURL = self.movieURL
-                        self.originalBtn.backgroundColor = UIColor.blue
-                        self.originalBtn.setTitleColor(UIColor.white, for: .normal)
+                        DispatchQueue.main.async {
+                            SVProgressHUD.dismiss()
+                            let item = AVPlayerItem(url: self.movieURL)
+                            let player = AVPlayer(playerItem: item)
+                            self.layer.player = player
+                            self.layer.frame = self.view.frame
+                            self.view.layer.addSublayer(self.layer)
+                            player.play()
+                            self.outputURL = self.movieURL
+                            self.originalBtn.backgroundColor = UIColor.blue
+                            self.originalBtn.setTitleColor(UIColor.white, for: .normal)
+                        }
                     }
                 }
                 break
